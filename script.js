@@ -35,6 +35,7 @@ function setupRTC(){
 		applyForeignObj(foreignObj);
 		updateCommObj = function(){
 			out.innerText+="\n"+btoa(JSON.stringify(commObj))+"\n";
+		}
 		rtc.createAnswer()
 			.then(answer=>rtc.setLocalDescription(answer))
 			.then(()=>{
@@ -46,6 +47,7 @@ function setupRTC(){
 			setupDataChannel();
 		};
 	}
+}
 function applyForeignObj(foreignObj){
 	foreignObj.sdp.forEach(sdp=>rtc.setRemoteDescription(sdp));
 	foreignObj.ice.forEach(sdp=>rtc.addIceCandidate(ice));
