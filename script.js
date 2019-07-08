@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 console.log("outer hi");
 var rtc;
 var dataChannel;
-var commObj = {sdp:[];ice:[]};
+var commObj = {sdp:[],ice:[]};
 var updateCommObj;
 setupRTC();
 function setupRTC(){
