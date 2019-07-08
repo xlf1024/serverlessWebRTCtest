@@ -20,7 +20,7 @@ function setupRTC(){
 			{
 				urls:[
 					"stun:stun.services.mozilla.com",
-					"stun.stunprotocol.org:3478"
+					"stun:stun.stunprotocol.org:3478"
 				]
 			}
 		]
