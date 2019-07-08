@@ -55,7 +55,7 @@ function setupRTC(){
 }
 function applyForeignObj(foreignObj){
 	foreignObj.sdp.forEach(sdp=>rtc.setRemoteDescription(sdp));
-	foreignObj.ice.forEach(sdp=>rtc.addIceCandidate(ice));
+	foreignObj.ice.forEach(ice=>rtc.addIceCandidate(ice));
 }
 function setupDataChannel(){
 	dataChannel.onopen = console.log;
