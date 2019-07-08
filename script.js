@@ -61,7 +61,7 @@ function setupDataChannel(){
 	dataChannel.onopen = console.log;
 	dataChannel.onclose = console.log;
 	dataChannel.onmessage = e =>{
-		out.innerText += "\n" + evt.data + "\n";
+		out.innerText += "\n" + e.data + "\n";
 	}
 	input.addEventListener("input", evt=>{
 		dataChannel.send(evt.target.value);
