@@ -22,7 +22,7 @@ function setupRTC(){
 			link.href = document.location.origin + document.location.path + "#" + btoa(JSON.stringify(commObj));
 		}
 		rtc.createOffer()
-			.then(offer=>rtc.setLocalDescription(offer));
+			.then(offer=>rtc.setLocalDescription(offer))
 			.then(()=>{
 				commObj.sdp.push(rtc.localDescription);
 				updateCommObj();
