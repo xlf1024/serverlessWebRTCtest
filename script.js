@@ -15,10 +15,10 @@ var out;
 var input;
 var link;
 function setupRTC(){
-	rtc = new RTCPeerConnection({
+	rtc = new RTCPeerConnection(/*{
 		iceServers:[
 			{
-				urls:[/*
+				urls:[
 					"stun:stun1.l.google.com:19302",
 					"stun:stun1.l.google.com:19305",
 					"stun:stun2.l.google.com:19302",
@@ -28,11 +28,11 @@ function setupRTC(){
 					"stun:stun4.l.google.com:19302",
 					"stun:stun4.l.google.com:19305",
 					"stun:stun.services.mozilla.com",
-					"stun:stun.stunprotocol.org:3478"*/
+					"stun:stun.stunprotocol.org:3478"
 				]
 			}
 		]
-	});
+	}*/);
 	rtc.onicecandidate = e =>{
 		commObj.ice.push(e.candidate);
 		updateCommObj();
