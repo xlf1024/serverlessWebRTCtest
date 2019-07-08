@@ -33,7 +33,7 @@ function setupRTC(){
 				updateCommObj();
 			});
 		input.addEventListener("input",e=>{
-			applyForeignObj(JSON.parse(btoa(e.target.value)));
+			applyForeignObj(JSON.parse(atob(e.target.value)));
 		});
 	}else{
 		var foreignObj = JSON.parse(atob(document.location.hash.slice(1)));
