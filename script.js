@@ -64,7 +64,7 @@ function setupDataChannel(){
 		out.innerText += "\n" + evt.data + "\n";
 	}
 	input.addEventListener("input", evt=>{
-		dataChannel.sendMessage(evt.target.value);
+		dataChannel.send(evt.target.value);
 		dataChannel.onmessage({data:evt.target.value});
 		requestAnimationFrame(()=>input.value="");
 	});
