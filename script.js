@@ -19,14 +19,14 @@ function setupRTC(){
 		iceServers:[
 			{
 				urls:[
-					"stun1.l.google.com:19302",
-					"stun1.l.google.com:19305",
-					"stun2.l.google.com:19302",
-					"stun2.l.google.com:19305",
-					"stun3.l.google.com:19302",
-					"stun3.l.google.com:19305",
-					"stun4.l.google.com:19302",
-					"stun4.l.google.com:19305",
+					"stun:stun1.l.google.com:19302",
+					"stun:stun1.l.google.com:19305",
+					"stun:stun2.l.google.com:19302",
+					"stun:stun2.l.google.com:19305",
+					"stun:stun3.l.google.com:19302",
+					"stun:stun3.l.google.com:19305",
+					"stun:stun4.l.google.com:19302",
+					"stun:stun4.l.google.com:19305",
 					"stun:stun.services.mozilla.com",
 					"stun:stun.stunprotocol.org:3478"
 				]
