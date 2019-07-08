@@ -19,7 +19,8 @@ function setupRTC(){
 		iceServers:[
 			{
 				urls:[
-					"stun:stun.services.mozilla.com"
+					"stun:stun.services.mozilla.com",
+					"stun.stunprotocol.org:3478"
 				]
 			}
 		]
