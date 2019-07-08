@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded",()=>{
 	console.log("Hi");
-	out.innerText +="hi";
-	setupRTC();
 	out = document.getElementById("out");
 	input = document.getElementById("input");
 	link = document.getElementById("link");
+	out.innerText +="hi";
+	setupRTC();
 });
 console.log("outer hi");
 var rtc;
