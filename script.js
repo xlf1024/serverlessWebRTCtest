@@ -15,7 +15,15 @@ var out;
 var input;
 var link;
 function setupRTC(){
-	rtc = new RTCPeerConnection();
+	rtc = new RTCPeerConnection({
+		iceServers:[
+			{
+				urls:[
+					"stun:stun.services.mozilla.com"
+				]
+			}
+		]
+	});
 	rtc.onicecandidate = e =>{
 		commObj.ice.push(e.candidate);
 		updateCommObj();
@@ -65,7 +73,7 @@ function setupDataChannel(){
 	}
 	input.addEventListener("change", evt=>{
 		dataChannel.send(evt.target.value);
-		out.innerText += "\n>>" + evt.target-value + "\n";
+		out.innerText += "\n>>" + evt.target.value + "\n";
 		requestAnimationFrame(()=>input.value="");
 	});
 }
