@@ -32,7 +32,7 @@ function setupRTC(){
 				commObj.sdp.push(rtc.localDescription);
 				updateCommObj();
 			});
-		input.addEventListener("input",e=>{
+		input.addEventListener("change",e=>{
 			applyForeignObj(JSON.parse(atob(e.target.value)));
 		});
 	}else{
@@ -63,7 +63,7 @@ function setupDataChannel(){
 	dataChannel.onmessage = e =>{
 		out.innerText += "\n" + e.data + "\n";
 	}
-	input.addEventListener("input", evt=>{
+	input.addEventListener("change", evt=>{
 		dataChannel.send(evt.target.value);
 		dataChannel.onmessage({data:evt.target.value});
 		requestAnimationFrame(()=>input.value="");
