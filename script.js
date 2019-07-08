@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentReady"){
+document.addEventListener("DOMContentLoaded"){
 	console.log("Hi");
 	out.innerText +="hi";
 }
