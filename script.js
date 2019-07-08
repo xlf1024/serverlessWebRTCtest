@@ -8,6 +8,7 @@ var rtc;
 var dataChannel;
 var commObj = {sdp:[];ice:[]};
 var updateCommObj;
+setupRTC();
 function setupRTC(){
 	rtc = new RTCPeerConnection();
 	rtc.onicecandidate = e =>{
