@@ -61,11 +61,11 @@ function setupDataChannel(){
 	dataChannel.onopen = console.log;
 	dataChannel.onclose = console.log;
 	dataChannel.onmessage = e =>{
-		out.innerText += "\n" + e.data + "\n";
+		out.innerText += "\n<<" + e.data + "\n";
 	}
 	input.addEventListener("change", evt=>{
 		dataChannel.send(evt.target.value);
-		dataChannel.onmessage({data:evt.target.value});
+		out.innerText += "\n>>" + evt.target-value + "\n";
 		requestAnimationFrame(()=>input.value="");
 	});
 }
