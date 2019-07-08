@@ -2,12 +2,18 @@ document.addEventListener("DOMContentLoaded",()=>{
 	console.log("Hi");
 	out.innerText +="hi";
 	setupRTC();
+	out = document.getElementById("out");
+	input = document.getElementById("input");
+	link = document.getElementById("link");
 });
 console.log("outer hi");
 var rtc;
 var dataChannel;
 var commObj = {sdp:[],ice:[]};
 var updateCommObj;
+var out;
+var input;
+var link;
 setupRTC();
 function setupRTC(){
 	rtc = new RTCPeerConnection();
@@ -19,7 +25,7 @@ function setupRTC(){
 		dataChannel = rtc.createDataChannel("ch1");
 		setupDataChannel();
 		updateCommObj = function(){
-			link.href = document.location.origin + document.location.path + "#" + btoa(JSON.stringify(commObj));
+			link.href = document.location.origin + document.location.pathname + "#" + btoa(JSON.stringify(commObj));
 		}
 		rtc.createOffer()
 			.then(offer=>rtc.setLocalDescription(offer))
