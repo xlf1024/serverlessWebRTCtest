@@ -14,7 +14,6 @@ var updateCommObj;
 var out;
 var input;
 var link;
-setupRTC();
 function setupRTC(){
 	rtc = new RTCPeerConnection();
 	rtc.onicecandidate = e =>{
