@@ -15,7 +15,7 @@ var out;
 var input;
 var link;
 function setupRTC(){
-	rtc = new RTCPeerConnection(/*{
+	rtc = new RTCPeerConnection({
 		iceServers:[
 			{
 				urls:[
@@ -32,7 +32,7 @@ function setupRTC(){
 				]
 			}
 		]
-	}*/);
+	});
 	rtc.onicecandidate = e =>{
 		commObj.ice.push(e.candidate);
 		updateCommObj();
