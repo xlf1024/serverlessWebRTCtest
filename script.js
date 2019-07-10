@@ -34,7 +34,7 @@ function setupRTC(){
 		]
 	});
 	rtc.onicecandidate = e =>{
-		commObj.ice.push(e.candidate);
+		if(e.candidate)commObj.ice.push(e.candidate);
 		updateCommObj();
 	}
 	if(!document.location.hash){
